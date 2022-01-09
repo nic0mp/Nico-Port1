@@ -4,29 +4,28 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-const projectsDemo = [{
-  title: 'Project 1',
-  description: 'This is a really really long project description'
-},{
-  title: 'Project 2',
-  description: 'This is a really really long project description'
-},{
-  title: 'Project 3',
-  description: 'This is a really really long project description'
-},{
-  title: 'Project 4',
-  description: 'This is a really really long project description'
-}];
 const Projects = () => (
   <Section>
     <SectionDivider/>
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-      {projects.map((project) => (
-        <div>
-          {project.title}
-         
-        </div>
+      {projects.map(({id, image, title, description, tags, source, visit}) => (
+        <BlogCard key={id}>
+          <Img src={image}/>
+          <TitleContent>
+            <HeaderThree title>{title}</HeaderThree>
+            <Hr />
+          </TitleContent>
+          <CardInfo>{description}</CardInfo>
+          <div>
+            <TitleContent>Stack</TitleContent>
+            <TagList>
+              {tags.map((tag,i) => (
+                <Tag key={i}>{tag}</Tag>
+              ))}
+            </TagList>
+          </div>
+        </BlogCard>
       ))}
     </GridContainer>
   </Section>
