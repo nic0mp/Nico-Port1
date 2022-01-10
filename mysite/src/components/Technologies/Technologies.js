@@ -6,6 +6,7 @@ import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './Techn
 const Technologies = () =>  (
   <Section id="tech">
     <SectionDivider />
+    <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
     Duis aute irure dolor in reprehenderit in voluptate
@@ -13,9 +14,29 @@ const Technologies = () =>  (
     </SectionText>
     <List>
       <ListItem>
-        <DiFirebase size="3rem"/>
+        <DiReact size="3rem"/>
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
+          <ListParagraph>
+            Experience with <br/>
+            React.js
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <DiFirebase size="3rem"/>
+        <ListContainer>
+          <ListTitle>Back-End</ListTitle>
+          <ListParagraph>
+            Experience with <br/>
+            React.js
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <DiZend size="3rem"/>
+        <ListContainer>
+          <ListTitle>Skills</ListTitle>
           <ListParagraph>
             Experience with <br/>
             React.js
