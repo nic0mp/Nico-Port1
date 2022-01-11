@@ -9,7 +9,7 @@ const Hero = () => (
     <LeftSection>
       <SectionTitle main center>
 
-        My Personal Portfolo
+        My Personal Portfolio
 
       </SectionTitle>
       <SectionText>
